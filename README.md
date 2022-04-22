@@ -23,7 +23,7 @@ jobs:
       - name: Run tests
 
       - name: Generate test report
-        uses: rempelj/nunit-html-action@main
+        uses: rempelj/nunit-html-action@v1
         if: always()
         with:
           inputXmlPath: artifacts/results.xml
