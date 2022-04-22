@@ -6,9 +6,6 @@ This Github Action generates an HTML report from NUnit XML test results.
 
 ## Usage
 
-Following setup does not work in workflows triggered by pull request from forked repository.
-If that's fine for you, using this action is as simple as:
-
 ```yaml
 on:
   pull_request:
