@@ -1,0 +1,17 @@
+name: 'NUnit HTML Report'
+description: 'Generates an HTML report from NUnit XML test results'
+inputs:
+  xml_filename:
+    description: 'XML input file name'
+    required: true
+  html_filename:
+    description: 'HTML output file name'
+    required: false
+runs:
+  using: "composite"
+  steps:
+    - run: python main.py
+      shell: bash
+branding:
+  icon: 'file'
+  color: 'green'
