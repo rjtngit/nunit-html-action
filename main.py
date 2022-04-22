@@ -117,11 +117,11 @@ def parse_xml(filename_xml):
 
 def main():
     filename_xml = "example.xml"
-    if "xml_filename" in os.environ:
-        filename_xml = os.environ['xml_filename']
+    if "inputXmlPath" in os.environ:
+        filename_xml = os.environ['inputXmlPath']
     filename_html = filename_xml.replace(".xml", ".html")
-    if "html_filename" in os.environ:
-        filename_xml = os.environ['html_filename']
+    if "outputHtmlPath" in os.environ:
+        filename_xml = os.environ['outputHtmlPath']
     test_results = parse_xml(filename_xml)
     html = make_html(test_results)
     file = open(filename_html, "w")

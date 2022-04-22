@@ -1,11 +1,11 @@
 name: 'NUnit HTML Report'
 description: 'Generates an HTML report from NUnit XML test results'
 inputs:
-  xml_filename:
-    description: 'XML input file name'
+  inputXmlPath:
+    description: 'XML input file path'
     required: true
-  html_filename:
-    description: 'HTML output file name'
+  outputHtmlPath:
+    description: 'HTML output file path'
     required: false
 runs:
   using: "composite"
