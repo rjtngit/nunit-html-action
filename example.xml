@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="5" result="Failed(Child)" total="5" passed="4" failed="1" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2022-04-22 19:08:51Z" end-time="2022-04-22 19:08:51Z" duration="0.085248">
+  <test-suite type="TestSuite" id="1000" name="SampleTests" fullname="SampleTests" runstate="Runnable" testcasecount="5" result="Failed" site="Child" start-time="2022-04-22 19:08:51Z" end-time="2022-04-22 19:08:51Z" duration="0.085248" total="5" passed="4" failed="1" inconclusive="0" skipped="0" asserts="0">
+    <properties />
+    <failure>
+      <message><![CDATA[One or more child tests had errors]]></message>
+    </failure>
+    <test-suite type="Assembly" id="1008" name="Tests.dll" fullname="/Users/J/SampleTests/Library/ScriptAssemblies/Tests.dll" runstate="Runnable" testcasecount="5" result="Failed" site="Child" start-time="2022-04-22 19:08:51Z" end-time="2022-04-22 19:08:51Z" duration="0.054757" total="5" passed="4" failed="1" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="17693" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+      </properties>
+      <failure>
+        <message><![CDATA[One or more child tests had errors]]></message>
+      </failure>
+      <test-suite type="TestFixture" id="1001" name="MoreTests" fullname="MoreTests" classname="MoreTests" runstate="Runnable" testcasecount="3" result="Failed" site="Child" start-time="2022-04-22 19:08:51Z" end-time="2022-04-22 19:08:51Z" duration="0.031012" total="3" passed="2" failed="1" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <failure>
+          <message><![CDATA[One or more child tests had errors]]></message>
+        </failure>
+        <test-case id="1004" name="FailingTest" fullname="MoreTests.FailingTest" methodname="FailingTest" classname="MoreTests" runstate="Runnable" seed="199616022" result="Failed" start-time="2022-04-22 19:08:51Z" end-time="2022-04-22 19:08:51Z" duration="0.006050" asserts="0">
+          <properties />
+          <failure>
+            <message><![CDATA[Intentional failure]]></message>
+            <stack-trace><![CDATA[at MoreTests.FailingTest () [0x00001] in /Users/J/SampleTests/Assets/Tests/MoreTests.cs:29
+]]></stack-trace>
+          </failure>
+        </test-case>
+        <test-case id="1002" name="MoreTestsSimplePasses" fullname="MoreTests.MoreTestsSimplePasses" methodname="MoreTestsSimplePasses" classname="MoreTests" runstate="Runnable" seed="883604531" result="Passed" start-time="2022-04-22 19:08:51Z" end-time="2022-04-22 19:08:51Z" duration="0.001625" asserts="0">
+          <properties />
+        </test-case>
+        <test-case id="1003" name="MoreTestsWithEnumeratorPasses" fullname="MoreTests.MoreTestsWithEnumeratorPasses" methodname="MoreTestsWithEnumeratorPasses" classname="MoreTests" runstate="Runnable" seed="1199874364" result="Passed" start-time="2022-04-22 19:08:51Z" end-time="2022-04-22 19:08:51Z" duration="0.006873" asserts="0">
+          <properties>
+            <property name="_JOINTYPE" value="UnityCombinatorial" />
+          </properties>
+        </test-case>
+      </test-suite>
+      <test-suite type="TestFixture" id="1005" name="Tests" fullname="Tests" classname="Tests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2022-04-22 19:08:51Z" end-time="2022-04-22 19:08:51Z" duration="0.011063" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-case id="1007" name="EnumeratorPasses" fullname="Tests.EnumeratorPasses" methodname="EnumeratorPasses" classname="Tests" runstate="Runnable" seed="317893274" result="Passed" start-time="2022-04-22 19:08:51Z" end-time="2022-04-22 19:08:51Z" duration="0.006172" asserts="0">
+          <properties>
+            <property name="_JOINTYPE" value="UnityCombinatorial" />
+          </properties>
+        </test-case>
+        <test-case id="1006" name="SimplePasses" fullname="Tests.SimplePasses" methodname="SimplePasses" classname="Tests" runstate="Runnable" seed="1578440101" result="Passed" start-time="2022-04-22 19:08:51Z" end-time="2022-04-22 19:08:51Z" duration="0.000071" asserts="0">
+          <properties />
+        </test-case>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>
