@@ -1,10 +1,9 @@
-import sys
+import os
 
 from xml.dom.minidom import parse
 
 from markyp_bootstrap4.alerts import alert
 from markyp_bootstrap4.badges import span_badge
-from markyp_bootstrap4.buttons import ButtonStyle
 from markyp_html import webpage
 from markyp_html.block import div, pre
 
@@ -118,16 +117,13 @@ def parse_xml(filename_xml):
 
 def main():
     filename_xml = "example.xml"
-    if len(sys.argv) > 1:
-        filename_xml = int(sys.argv[1])
-
+    if "xml_filename" in os.environ:
+        filename_xml = os.environ['xml_filename']
     filename_html = filename_xml.replace(".xml", ".html")
-    if len(sys.argv) > 2:
-        filename_html = int(sys.argv[2])
-
+    if "html_filename" in os.environ:
+        filename_xml = os.environ['html_filename']
     test_results = parse_xml(filename_xml)
     html = make_html(test_results)
-
     file = open(filename_html, "w")
     file.write(html)
     file.close()
