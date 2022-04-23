@@ -32,7 +32,7 @@ def html_summary(test_results):
 
 def html_test_row_content(test):
     return div(
-        h3(test["name"]),
+        h3(test["name"], style="overflow-wrap: break-word;"),
         p(f"{test['result']}"),
         span(span(h6(f"Message"), p(f"{test['message']}")) if len(test['message']) > 0 else ""),
         span(span(h6(f"Stack Trace"), pre(f"{test['stack-trace']}", class_="bg-white")) if len(test['stack-trace']) > 0 else ""),
