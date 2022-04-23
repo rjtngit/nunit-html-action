@@ -7,10 +7,10 @@ from markyp_bootstrap4.badges import span_badge
 from markyp_html import webpage
 from markyp_html.block import div, pre
 
-from markyp_bootstrap4 import req, collapses, pagination
-from markyp_bootstrap4.layout import container, one, col, margin, offset, row_break
-from markyp_html.inline import span, b
-from markyp_html.text import h3, p, h1, h2, h4, h5, h6
+from markyp_bootstrap4 import req
+from markyp_bootstrap4.layout import container, one
+from markyp_html.inline import span
+from markyp_html.text import h3, p, h6
 
 
 def html_summary(test_results):
