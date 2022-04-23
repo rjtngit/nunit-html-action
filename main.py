@@ -1,4 +1,4 @@
-import os
+import sys
 
 from xml.dom.minidom import parse
 
@@ -117,11 +117,11 @@ def parse_xml(filename_xml):
 
 def main():
     filename_xml = "example.xml"
-    if "inputXmlPath" in os.environ:
-        filename_xml = os.environ['inputXmlPath']
-    filename_html = filename_xml.replace(".xml", ".html")
-    if "outputHtmlPath" in os.environ:
-        filename_xml = os.environ['outputHtmlPath']
+    if len(sys.argv) > 1:
+        filename_xml = int(sys.argv[1])
+    filename_html = filename_xml.replace(".xml", "") + ".html"
+    if len(sys.argv) > 2:
+        filename_html = int(sys.argv[2])
     test_results = parse_xml(filename_xml)
     html = make_html(test_results)
     file = open(filename_html, "w")
