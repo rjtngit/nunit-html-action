@@ -26,7 +26,7 @@ jobs:
           outputHtmlPath: artifacts/results.html
           
       - uses: actions/upload-artifact@v2 
-      # upload your test result artifacts
+        # upload your test result artifacts
 ```
 
 ## License
