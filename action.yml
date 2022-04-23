@@ -10,7 +10,9 @@ inputs:
 runs:
   using: "composite"
   steps:
-    - run: python main.py
+    - run: python -m pip install -r ${{ github.action_path }}/requirements.txt
+      shell: bash
+    - run: python ${{ github.action_path }}/main.py
       shell: bash
 branding:
   icon: 'file'
