@@ -8,7 +8,7 @@ This Github Action generates a human-readable HTML report from NUnit XML test re
 
 ```yaml
 - name: Generate HTML test report
-  uses: rempelj/nunit-html-action@v1.0.0
+  uses: rempelj/nunit-html-action@v1.0.1
   if: always()
   with:
     inputXmlPath: artifacts/results.xml
