@@ -15,17 +15,17 @@ jobs:
     name: Test 
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
-      - name: Run tests
+      - uses: actions/checkout@v2
+      - uses: # run your tests
 
       - name: Generate test report
         uses: rempelj/nunit-html-action@v1
         if: always()
         with:
           inputXmlPath: artifacts/results.xml
-      - name: Upload test artifacts
-        uses: actions/upload-artifact@v2
+          
+      - uses: actions/upload-artifact@v2 
+      # upload your test result artifacts
 ```
 
 ## License
