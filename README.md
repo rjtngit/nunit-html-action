@@ -1,6 +1,6 @@
 # NUnit HTML Report
 
-This Github Action generates an HTML report from NUnit XML test results.
+This Github Action generates a human-readable HTML report from NUnit XML test results.
 
 ![](example.png)
 
@@ -8,7 +8,7 @@ This Github Action generates an HTML report from NUnit XML test results.
 
 ```yaml
 - name: Generate HTML test report
-  uses: rempelj/nunit-html-action@v1
+  uses: rempelj/nunit-html-action@v1.0.0
   if: always()
   with:
     inputXmlPath: artifacts/results.xml
