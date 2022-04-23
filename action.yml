@@ -6,7 +6,7 @@ inputs:
     required: true
   outputHtmlPath:
     description: 'HTML output file path'
-    default: ""
+    default: ''
     required: false
 runs:
   using: "composite"
