@@ -18,7 +18,7 @@ jobs:
       - uses: actions/checkout@v2
       - uses: # run your tests
 
-      - name: Generate test report
+      - name: Generate HTML test report
         uses: rempelj/nunit-html-action@v1
         if: always()
         with:
