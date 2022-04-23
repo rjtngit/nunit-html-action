@@ -30,4 +30,4 @@ jobs:
 
 ## License
 
-The scripts and documentation in this project are released under the MIT License
+The scripts and documentation in this project are released under the [MIT License](https://github.com/rempelj/nunit-html-action/blob/main/LICENSE).
