@@ -23,6 +23,7 @@ jobs:
         if: always()
         with:
           inputXmlPath: artifacts/results.xml
+          outputHtmlPath: artifacts/results.html
           
       - uses: actions/upload-artifact@v2 
       # upload your test result artifacts
