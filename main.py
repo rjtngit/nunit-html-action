@@ -9,7 +9,7 @@ from markyp_html.block import div, pre
 
 from markyp_bootstrap4 import req
 from markyp_bootstrap4.layout import container, one
-from markyp_html.inline import span
+from markyp_html.inline import span, br
 from markyp_html.text import h3, p, h6
 
 
@@ -33,7 +33,9 @@ def html_summary(test_results):
 def html_test_row_content(test):
     return div(
         h3(test["name"], style="overflow-wrap: break-word;"),
-        p(f"{test['result']}"),
+        (span_badge.danger(f"{test['result']}") if len(test['message']) > 0 else span_badge.light(f"{test['result']}")),
+        span_badge.light(f"Duration: {test['duration']}"),
+        p(),
         span(span(h6(f"Message"), p(f"{test['message']}")) if len(test['message']) > 0 else ""),
         span(span(h6(f"Stack Trace"), pre(f"{test['stack-trace']}", class_="bg-white")) if len(test['stack-trace']) > 0 else ""),
     )
@@ -44,7 +46,7 @@ def html_test_row(test):
         return alert.danger(html_test_row_content(test))
     if test["result"] == "Passed":
         return alert.success(html_test_row_content(test))
-    return alert.light(html_test_row_content(test))
+    return alert.secondary(html_test_row_content(test))
 
 
 def html_test_list(test_results):
