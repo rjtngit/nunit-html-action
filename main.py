@@ -1,4 +1,5 @@
 import sys
+import os
 
 from xml.dom.minidom import parse
 
@@ -127,6 +128,7 @@ def main():
         filename_html = sys.argv[2]
     test_results = parse_xml(filename_xml)
     html = make_html(test_results)
+    os.makedirs(os.path.dirname(filename_html), exist_ok=True)
     file = open(filename_html, "w")
     file.write(html)
     file.close()
