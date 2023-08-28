@@ -120,9 +120,10 @@ def parse_xml(filename_xml):
 
 
 def main():
-    filename_xml = "example.xml"
-    if len(sys.argv) > 1:
-        filename_xml = sys.argv[1]
+    if len(sys.argv) < 2:
+        print("Error: Missing XML input file path")
+        sys.exit(1)
+    filename_xml = sys.argv[1]
     filename_html = filename_xml.replace(".xml", "") + ".html"
     if len(sys.argv) > 2:
         filename_html = sys.argv[2]
