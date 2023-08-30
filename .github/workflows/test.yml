@@ -1,0 +1,20 @@
+name: Test Action
+on: push
+jobs:
+  generate-html:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      - name: Generate HTML test report
+        uses: ./
+        if: always()
+        with:
+          inputXmlPath: ${{ github.workspace }}/example.xml
+          outputHtmlPath: ~/test_results/results.html
+      - name: Upload test artifacts
+        uses: actions/upload-artifact@v3
+        if: always()
+        with:
+          name: results.html
+          path: ~/test_results/results.html
