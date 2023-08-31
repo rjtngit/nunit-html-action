@@ -1,6 +1,6 @@
 # NUnit HTML Report
 
-This Github Action generates a human-readable HTML report from NUnit XML test results.
+This Github Action generates a human-readable HTML report from NUnit XML test results, such as Unity Test Runner.
 
 ![](example.png)
 
