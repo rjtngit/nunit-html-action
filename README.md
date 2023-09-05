@@ -23,6 +23,7 @@ steps:
     uses: # your-test-runner
   - name: Make output directory writable # Might be required if you are writing to an existing directory.
     shell: bash
+    if: always()
     run: sudo chmod a+w test_results
   - name: Generate HTML test report
     uses: rjtngit/nunit-html-action@v1
