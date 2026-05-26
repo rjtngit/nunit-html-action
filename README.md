@@ -8,7 +8,7 @@ This Github Action generates a human-readable HTML report from NUnit XML test re
 
 ```yaml
 - name: Generate HTML test report
-  uses: rjtngit/nunit-html-action@v1
+  uses: rjtngit/nunit-html-action@v2
   if: always()
   with:
     inputXmlPath: test_results/results.xml
@@ -26,13 +26,13 @@ steps:
     if: always()
     run: sudo chmod a+w test_results
   - name: Generate HTML test report
-    uses: rjtngit/nunit-html-action@v1
+    uses: rjtngit/nunit-html-action@v2
     if: always()
     with:
       inputXmlPath: test_results/results.xml
       outputHtmlPath: test_results/results.html
   - name: Upload test artifacts # So you can download the results from the workflow run.
-    uses: actions/upload-artifact@v3
+    uses: actions/upload-artifact@v7
     if: always()
     with:
       path: test_results
