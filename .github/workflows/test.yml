@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v6
       - name: Generate HTML test report
         uses: ./
         if: always()
@@ -13,7 +13,7 @@ jobs:
           inputXmlPath: ${{ github.workspace }}/example.xml
           outputHtmlPath: ~/test_results/results.html
       - name: Upload test artifacts
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v7
         if: always()
         with:
           name: results.html
